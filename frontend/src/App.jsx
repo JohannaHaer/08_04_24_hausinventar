@@ -1,13 +1,18 @@
 import {Route, Routes} from 'react-router-dom'
-import './App.css'
+import NavBar from '../components/navBar'
+import Home from '../components/home'
+import FurnitureGallery from '../components/furnitureGallery'
 
 function App() {
 
   return (
     <>
+      <NavBar />
       <Routes>
-        <Route/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/furniture/:id' element={<FurnitureGallery/>}/>
       </Routes>
+
     </>
   )
 }

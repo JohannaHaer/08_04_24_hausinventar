@@ -1,9 +1,11 @@
-import React from 'react'
+import CategoryCards from './categoryCards'
 
-const home = () => {
+const Home = () => {
   return (
-    <div>home</div>
+    <>
+          <CategoryCards/>
+    </>
   )
 }
 
-export default home
+export default Home
