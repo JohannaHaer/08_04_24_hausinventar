@@ -79,7 +79,7 @@ router.patch("/details/:id", mult.none(), async (req, res) => {
 router.delete("/details/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const Interior = await Interior;
+    const interior = await Interior;
     const filter = { _id: id };
     let doc = await interior.findOneAndDelete(filter);
     res.json(doc);
