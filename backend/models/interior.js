@@ -11,14 +11,14 @@ const interiorSchema = new Schema ({
     },
     image: {
         type: String,
-        required: true
+        // required: true
     },
     description: {
         type: String,
         required: true
     },
     category: {
-        type: String,
+        type: Number,
         required: true
     }
 })
