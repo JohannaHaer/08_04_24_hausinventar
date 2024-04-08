@@ -15,6 +15,19 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/:category', async (req, res) => {
+    console.log(req.params.category);
+    try {
+        const interiors = await Interior.find({
+            "category": req.params.category,
+        }).lean()
+        res.json(interiors)
+    } catch (error) {
+        console.error(error)
+        res.sendStatus(404)
+    }
+})
+
 router.post('/', mult.none(), async (req, res) => {
     try {
         const newInterior = new Interior ({

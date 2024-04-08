@@ -18,7 +18,7 @@ const interiorSchema = new Schema ({
         required: true
     },
     category: {
-        type: Number,
+        type: String,
         required: true
     }
 })
