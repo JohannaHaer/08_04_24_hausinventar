@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+
 
 const NavBar = () =>{
 
@@ -22,6 +24,12 @@ const NavBar = () =>{
     <Link to='/' className="btn btn-ghost text-xl">MyFurniture</Link>
   </div>
   <div className="navbar-end">
+  <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
   </div>
 </div>
     )
